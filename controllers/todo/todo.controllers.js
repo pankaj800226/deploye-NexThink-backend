@@ -56,7 +56,7 @@ export const getTask = async (req, res) => {
   try {
     const userId = req.userId;
     const page = parseInt(req.query.page) || 1;
-    const limit = 6
+    const limit = 9
     const skip = (page - 1) * limit
 
     const total = await Todo.countDocuments({ userId })
