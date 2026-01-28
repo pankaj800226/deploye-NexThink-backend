@@ -103,22 +103,7 @@ export const profile = async (req, res) => {
   }
 };
 
-// edit profile
-// export const editProfile = async (req, res) => {
-//   try {
-//     const userId = req.userId;
 
-//     const { username, email } = req.body;
-
-//     const updateData = { username, email };
-
-//     const updateUser = await User.findByIdAndUpdate(userId, updateData);
-//     res.status(201).json(updateUser);
-//   } catch (error) {
-//     console.log(error);
-//     return res.status(500).json({ message: "Server error" });
-//   }
-// };
 export const editProfile = async (req, res) => {
   try {
     const userId = req.userId;

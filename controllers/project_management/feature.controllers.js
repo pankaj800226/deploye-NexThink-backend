@@ -29,7 +29,7 @@ export const getFeature = async (req, res) => {
         const { projectId } = req.params
 
 
-        const findFeature = await Feature.find({ projectId }).sort({ createdAt: -1 })
+        const findFeature = await Feature.find({ projectId })
 
         if (!findFeature) {
             return res.status(404).json({ message: "Feature not found" })
