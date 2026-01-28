@@ -9,6 +9,7 @@ import todoRouter from "./routers/todo/todo.routers.js";
 import coverImgRouter from './routers/dashboard/coverImg.router.js'
 import shedularRouter from './routers/work_shedular/shedular.router.js';
 import projectRouter from './routers/project_management/project.routers.js'
+import featureRouter from './routers/project_management/feature.routers.js'
 
 const PORT = process.env.PORT || 8000;
 const app = express();
@@ -41,6 +42,8 @@ app.use("/api/user", userRouter);
 app.use("/api/todo", todoRouter);
 app.use('/api/coverImg', coverImgRouter)
 app.use('/api/shedular', shedularRouter)
-app.use('/api/project',projectRouter)
+app.use('/api/project', projectRouter)
+app.use('/api/feature', featureRouter)
+
 
 app.listen(PORT, () => console.log("Server Is Running On Port", PORT));
