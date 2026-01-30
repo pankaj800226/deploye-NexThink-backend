@@ -10,6 +10,7 @@ import coverImgRouter from './routers/dashboard/coverImg.router.js'
 import shedularRouter from './routers/work_shedular/shedular.router.js';
 import projectRouter from './routers/project_management/project.routers.js'
 import featureRouter from './routers/project_management/feature.routers.js'
+import feedbackRouter from './routers/feedback/feedback.router.js'
 
 const PORT = process.env.PORT || 8000;
 const app = express();
@@ -44,6 +45,7 @@ app.use('/api/coverImg', coverImgRouter)
 app.use('/api/shedular', shedularRouter)
 app.use('/api/project', projectRouter)
 app.use('/api/feature', featureRouter)
+app.use('/api/feedback', feedbackRouter)
 
 
 app.listen(PORT, () => console.log("Server Is Running On Port", PORT));
