@@ -66,7 +66,7 @@ export const getTask = async (req, res) => {
       .skip(skip)
       .limit(limit)
 
-    if (findTask.length === 0) {
+    if (!findTask) {
       return res.status(404).json({ message: "No tasks found" });
     }
     
