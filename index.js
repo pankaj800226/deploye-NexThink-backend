@@ -11,6 +11,7 @@ import shedularRouter from './routers/work_shedular/shedular.router.js';
 import projectRouter from './routers/project_management/project.routers.js'
 import featureRouter from './routers/project_management/feature.routers.js'
 import feedbackRouter from './routers/feedback/feedback.router.js'
+import routenRouter from './routers/routen/routen.router.js'
 
 const PORT = process.env.PORT || 8000;
 const app = express();
@@ -46,6 +47,6 @@ app.use('/api/shedular', shedularRouter)
 app.use('/api/project', projectRouter)
 app.use('/api/feature', featureRouter)
 app.use('/api/feedback', feedbackRouter)
-
+app.use('/api/routen', routenRouter)
 
 app.listen(PORT, () => console.log("Server Is Running On Port", PORT));

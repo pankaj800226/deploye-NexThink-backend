@@ -30,7 +30,6 @@ export const getAllSchedulers = async (req, res) => {
         const userId = req.userId;
 
         const schedulers = await Scheduler.find({ userId })
-            .sort({ createdAt: -1 });
 
         return res.status(200).json({
             success: true,
